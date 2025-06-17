@@ -25,3 +25,14 @@ variable "private_subnet_cidrs" {
   type        = list(string)
   default     = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
 }
+
+variable "ami_id" {
+  description = "The AMI ID for the EC2 instance in the selected AWS region."
+  default     = "ami-044415bb13eee2391"
+}
+
+variable "instance_type" {
+  description = "The instance type for the EC2 instance."
+  type        = string
+  default     = "t3.micro"
+}
